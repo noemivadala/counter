@@ -9,3 +9,6 @@ I linguaggi usati in questo progetto sono HTML, SASS e Javascript.
 - Html collegamento tra i file
 - Css per lo stile del counter
 - Javascript per il funzionamento
+
+
+![screenshot-counter](https://user-images.githubusercontent.com/18146517/214832723-c31b1822-043a-48be-8f4d-cafe0dd88f77.png)
