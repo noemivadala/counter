@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.divContainer {
+    min-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+
+    .cart {
+        max-width: 120px;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    .quantity {
+        position: absolute;
+        top: 33%;
+        left: 48%;
+        max-width: 110px;
+        animation: entry 0.2s ease-in-out;
+    }
+
+    .value-quantity{
+        position: fixed;
+        top: 34%;
+        left: 52%;
+        font-size: 21px;
+        color: #fff;
+        animation: entry 0.2s ease-in;
+
+        @keyframes entry {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+    }
+
+    .counter {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 10px;
+        margin: 0 auto;
+        max-width: 300px;
+        min-width: 120px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .buttonDecrement, .buttonIncrement {cursor: pointer;}
+
+        .inputNumber {
+            -moz-appearance: textfield;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            color: #212121;
+            max-width: 45px;
+        }
+        button {
+            background-color: #f9f9f9;
+            max-width: 57px;
+            max-height: 57px;
+            border: none;
+            font-size: 28px;
+            font-weight: 200;
+        }
+    }
+
+    .add {
+        min-width: 150px;
+        min-height: 32px;
+        background-color: #f9f9f9;
+        border: none;
+        border-radius: 12px;
+        margin: 20px 0px 0px 0px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .add:hover {
+        background-color: #4caf50;
+        color: #fff;
+    }
+    .reset {
+        min-width: 150px;
+        min-height: 32px;
+        background-color: #f9f9f9;
+        border: none;
+        border-radius: 12px;
+        margin: 20px 0px 0px 0px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .reset:hover {
+        background-color: #EB455F;
+        color: #fff;
+    }
+}
