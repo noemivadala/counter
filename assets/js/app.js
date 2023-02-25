@@ -37,30 +37,6 @@ valueQuantity.innerHTML = inputNumber.value;
 divCart.append(cart, quantity, valueQuantity)
 divContainer.append(divCart, counter);
 counter.append(buttonDecrement, inputNumber, buttonIncrement, add, reset);
-/*
-// 2 - function
-buttonDecrement.onclick = function() {
-    inputNumber.value--;
-
-    if (inputNumber.value <= 0){
-        inputNumber.value = 0;
-    }
-}
-
-buttonIncrement.onclick = function() {
-    inputNumber.value++;
-}
-
-// 3 - add to cart
-add.onclick = function() {
-    valueQuantity.innerHTML = inputNumber.value;
-}
-
-// 4 - reset
-reset.onclick = function() {
-    inputNumber.value = 0;
-    valueQuantity.innerHTML = inputNumber.value;
-}*/
 
 let counterDiv = document.getElementById('counterDiv');
 
