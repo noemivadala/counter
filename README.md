@@ -12,7 +12,7 @@ I linguaggi usati in questo progetto sono HTML, SASS e Javascript.
 
 Link:
 https://counter-noemivadala.netlify.app
-
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 [![Netlify](https://api.netlify.com/api/v1/badges/cddb1edf-2510-4ee2-a7f0-d10a889372b9/deploy-status)](https://app.netlify.com/sites/counter-noemivadala/deploys)
 
 ![screenshot-counter](https://user-images.githubusercontent.com/18146517/214832723-c31b1822-043a-48be-8f4d-cafe0dd88f77.png)
