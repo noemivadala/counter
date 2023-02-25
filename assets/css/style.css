@@ -14,23 +14,29 @@ body {
   align-content: center;
   justify-items: center;
 }
-.divContainer .cart {
-  max-width: 120px;
+.divContainer .divCart {
+  display: flex;
+  max-width: 165px;
+  max-height: 165px;
   text-align: center;
-  margin: 0 auto;
+  margin-bottom: 55px;
+}
+.divContainer .divCart .cart {
+  position: absolute;
+  max-width: 120px;
   padding-bottom: 50px;
 }
-.divContainer .quantity {
-  position: absolute;
-  top: 33%;
-  left: 48%;
+.divContainer .divCart .quantity {
+  position: relative;
+  top: -5%;
+  left: 17%;
   max-width: 110px;
   animation: entry 0.2s ease-in-out;
 }
-.divContainer .value-quantity {
-  position: fixed;
-  top: 34%;
-  left: 52%;
+.divContainer .divCart .value-quantity {
+  position: relative;
+  left: -9%;
+  top: 2%;
   font-size: 21px;
   color: #fff;
   animation: entry 0.2s ease-in;
@@ -53,9 +59,16 @@ body {
   min-width: 120px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 .divContainer .counter .buttonDecrement, .divContainer .counter .buttonIncrement {
   cursor: pointer;
+  background-color: #f9f9f9;
+  max-width: 57px;
+  max-height: 57px;
+  border: none;
+  font-size: 28px;
+  font-weight: 200;
 }
 .divContainer .counter .inputNumber {
   -moz-appearance: textfield;
@@ -65,15 +78,8 @@ body {
   color: #212121;
   max-width: 45px;
 }
-.divContainer .counter button {
-  background-color: #f9f9f9;
-  max-width: 57px;
-  max-height: 57px;
-  border: none;
-  font-size: 28px;
-  font-weight: 200;
-}
-.divContainer .add {
+.divContainer .counter .add {
+  grid-area: 2/1/3/4;
   min-width: 150px;
   min-height: 32px;
   background-color: #f9f9f9;
@@ -83,11 +89,12 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.divContainer .add:hover {
+.divContainer .counter .add:hover {
   background-color: #4caf50;
   color: #fff;
 }
-.divContainer .reset {
+.divContainer .counter .reset {
+  grid-area: 3/1/4/4;
   min-width: 150px;
   min-height: 32px;
   background-color: #f9f9f9;
@@ -97,7 +104,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.divContainer .reset:hover {
+.divContainer .counter .reset:hover {
   background-color: #EB455F;
   color: #fff;
 }

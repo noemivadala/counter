@@ -13,38 +13,47 @@ body {
     align-content: center;
     justify-items: center;
 
-    .cart {
-        max-width: 120px;
+    .divCart {
+        display: flex;
+        max-width: 165px;
+        max-height: 165px;
         text-align: center;
-        margin: 0 auto;
-        padding-bottom: 50px;
+        margin-bottom: 55px;
+
+
+        .cart {
+            position: absolute;
+            max-width: 120px;
+            padding-bottom: 50px;
+        }
+    
+        .quantity {
+            position: relative;
+            top: -5%;
+            left: 17%;
+            max-width: 110px;
+            animation: entry 0.2s ease-in-out;
+        }
+    
+        .value-quantity{
+            position: relative;
+            left: -9%;
+            top: 2%;
+            font-size: 21px;
+            color:#fff;
+            animation: entry 0.2s ease-in;
+    
+            @keyframes entry {
+                0% {
+                  opacity: 0;
+                }
+                100% {
+                  opacity: 1;
+                }
+              }
+        }
     }
 
-    .quantity {
-        position: absolute;
-        top: 33%;
-        left: 48%;
-        max-width: 110px;
-        animation: entry 0.2s ease-in-out;
-    }
-
-    .value-quantity{
-        position: fixed;
-        top: 34%;
-        left: 52%;
-        font-size: 21px;
-        color: #fff;
-        animation: entry 0.2s ease-in;
-
-        @keyframes entry {
-            0% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
-    }
 
     .counter {
         background-color: #f9f9f9;
@@ -56,8 +65,17 @@ body {
         min-width: 120px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
 
-        .buttonDecrement, .buttonIncrement {cursor: pointer;}
+        .buttonDecrement, .buttonIncrement {
+            cursor: pointer;
+            background-color: #f9f9f9;
+            max-width: 57px;
+            max-height: 57px;
+            border: none;
+            font-size: 28px;
+            font-weight: 200;
+        }
 
         .inputNumber {
             -moz-appearance: textfield;
@@ -67,42 +85,38 @@ body {
             color: #212121;
             max-width: 45px;
         }
-        button {
+
+        .add {
+            grid-area: 2 / 1 / 3 / 4;
+            min-width: 150px;
+            min-height: 32px;
             background-color: #f9f9f9;
-            max-width: 57px;
-            max-height: 57px;
             border: none;
-            font-size: 28px;
-            font-weight: 200;
+            border-radius: 12px;
+            margin: 20px 0px 0px 0px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .add:hover {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .reset {
+            grid-area: 3 / 1 / 4 / 4;
+            min-width: 150px;
+            min-height: 32px;
+            background-color: #f9f9f9;
+            border: none;
+            border-radius: 12px;
+            margin: 20px 0px 0px 0px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .reset:hover {
+            background-color: #EB455F;
+            color: #fff;
         }
     }
 
-    .add {
-        min-width: 150px;
-        min-height: 32px;
-        background-color: #f9f9f9;
-        border: none;
-        border-radius: 12px;
-        margin: 20px 0px 0px 0px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    .add:hover {
-        background-color: #4caf50;
-        color: #fff;
-    }
-    .reset {
-        min-width: 150px;
-        min-height: 32px;
-        background-color: #f9f9f9;
-        border: none;
-        border-radius: 12px;
-        margin: 20px 0px 0px 0px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    .reset:hover {
-        background-color: #EB455F;
-        color: #fff;
-    }
+
 }
